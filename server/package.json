@@ -1,0 +1,25 @@
+{
+  "name": "whatsapp-audio-summarizer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WhatsApp bot that summarizes forwarded audio messages using the Gemini API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "morgan": "^1.10.0",
+    "tmp": "^0.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+

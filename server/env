@@ -1,0 +1,8 @@
+META_WABA_TOKEN=your_long_lived_token
+META_PHONE_ID=your_phone_number_id
+META_VERIFY_TOKEN=your_webhook_verify_token
+META_APP_SECRET=your_meta_app_secret
+META_GRAPH_VERSION=v19.0
+GEMINI_API_KEY=AIzaSyDJGfsrKeGNKcUDAKdlmrOf_oRphjhvf84
+PORT=3000
+RATE_LIMIT_MS=15000

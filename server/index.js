@@ -510,14 +510,20 @@ app.get("/health", (req, res) => {
 async function bootstrap() {
   await fs.ensureDir(DATA_DIR);
   await optOutStore.init();
+}
 
+// Initialize on module load
+bootstrap().catch((err) => {
+  console.error("[server] Startup failed:", err);
+});
+
+// For local development
+if (require.main === module) {
   app.listen(CONFIG.port, () => {
     console.log(`[server] Listening on port ${CONFIG.port}`);
   });
 }
 
-bootstrap().catch((err) => {
-  console.error("[server] Startup failed:", err);
-  process.exit(1);
-});
+// Export for Vercel serverless
+module.exports = app;
 
